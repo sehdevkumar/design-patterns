@@ -30,7 +30,7 @@ class FireAlert implements Observer {
   }
 }
 
-class EarthquakeAlter implements Observer {
+class EarthquakeAlert implements Observer {
   // impplement of update method
   update(observerMessage: any): void {
     console.log(`Earthquake Alert ${observerMessage}`)
@@ -40,7 +40,7 @@ class EarthquakeAlter implements Observer {
 const subject = new SubjectClass()
 
 const fire = new FireAlert()
-const earthquake = new EarthquakeAlter()
+const earthquake = new EarthquakeAlert()
 
 subject.registerAlter(fire)
 subject.registerAlter(earthquake)
